@@ -1,0 +1,3 @@
+new TaskManager
+
+document.addEventListener

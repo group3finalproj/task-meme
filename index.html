@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="js/taskManger.js" defer></script>
 </head>
 <form>
     <form>
@@ -13,21 +14,21 @@
         <h2 class="text-center">Task List</h2>
         <p class="fw-bold">Add New Task</p>
         <label for="exampleFormControlInput1" class="form-label">Task name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" required>
+        <input type="text" class="form-control" id="exampleFormControlInput1">
       </div>
       <div class="mb-3 col-3">
         <label for="exampleFormControlTextarea1" class="form-label">Task description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
     
     <div class= “container”>
         <div class="row">
             <div class="col-auto">
             <label for="formGroupAssignedToInput">Assigned To:</label>
-            <input type="text" class="form-control" id="formGroupAssignedToInput" required>
+            <input type="text" class="form-control" id="formGroupAssignedToInput">
              </div>
         <div class="col-auto">
-            Date: <input type= “text” class="form-control" id=”datepicker” placeholder= "Enter a Date" required> <br>
+            Date: <input type= “text” class="form-control" id=”datepicker” placeholder= "Enter a Date"> <br>
             </div>
         </div>
     </div>
