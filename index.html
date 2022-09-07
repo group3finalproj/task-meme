@@ -11,9 +11,11 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="resources/style.css" />
+    <script src="js/index.js" type="module"></script>
   </head>
   <body>
-    <form>
+    <form id="new-todo-form" class="container">
       <div class="mb-3 col-3">
         <h2 class="text-center">Task List</h2>
         <p class="fw-bold">Add New Task</p>
@@ -41,14 +43,16 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-auto">
+          <div class="input-container col-auto">
             <label for="formGroupAssignedToInput">Assigned To:</label>
             <input
               type="text"
               class="form-control"
               id="formGroupAssignedToInput"
+              name="assignedTo"
               required
             />
+            <span class="error-message">You're not on the team!</span>
           </div>
           <div class="col-auto">
             Date:
@@ -63,12 +67,12 @@
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-dark">Add Task</button>
+      <button type="submit" class="btn btn-dark">Add Task</button>
     </form>
 
     <hr class="mt-5" />
 
-    <section>
+    <section class="container">
       <p class="fw-bold">Tasks</p>
       <div class="card text-bg-light mb-3" style="max-width: 18rem">
         <div class="card-body">

@@ -1,0 +1,16 @@
+.invalid .error-message {
+  display: initial;
+}
+
+.invalid label {
+  color: red;
+}
+
+.invalid input {
+  outline: 2px solid red;
+}
+
+.error-message {
+  display: none;
+  color: red;
+}
