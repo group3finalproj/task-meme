@@ -1,3 +1,1 @@
 new TaskManager
-
-document.addEventListener
