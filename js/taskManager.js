@@ -1,17 +1,17 @@
-export class TaskManager {
+class TaskManager {
   constructor(currentId = 0) {
     this.tasks = []
     this.currentId = currentId
   }
 
-  addTask(name, description, assignedTo, dueDate, status) {
+  addTask(name, description, assignedTo, dueDate) {
     const task = {
       id: this.currentId++,
       name: name,
       description: description,
       assignedTo: assignedTo,
       dueDate: dueDate,
-      status: 'TODO',
+      status: 'TODO'
     }
 
     this.tasks.push(task)
