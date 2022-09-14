@@ -4,8 +4,7 @@ let createTaskHtml = (name, description, assignedTo, dueDate) =>
   <p class="fw-bold">Add New Task</p>
   <label for="exampleFormControlInput1" class="form-label">Task name ${description}</label>
   <input type="text" class="form-control" id="exampleFormControlInput1" required/>
-</div> 
-  `
+</div> `
 
 
 
