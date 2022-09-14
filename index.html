@@ -11,15 +11,17 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="resources/style.css" />
+   <script src="js/taskManager.js" defer></script>
+    <script src="js/index.js" defer></script>
   </head>
   <body>
-    <form>
+    <form id="new-todo-form" class="container">
       <div class="mb-3 col-3">
         <h2 class="text-center">Task List</h2>
         <p class="fw-bold">Add New Task</p>
         <label for="exampleFormControlInput1" class="form-label"
-          >Task name</label
-        >
+          >Task name</label>
         <input
           type="text"
           class="form-control"
@@ -41,14 +43,15 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-auto">
+          <div class="input-container col-auto">
             <label for="formGroupAssignedToInput">Assigned To:</label>
             <input
               type="text"
               class="form-control"
               id="formGroupAssignedToInput"
-              required
-            />
+              name="assignedTo"
+              required/>
+            <span class="error-message">You're not on the team!</span>
           </div>
           <div class="col-auto">
             Date:
@@ -57,32 +60,31 @@
               class="form-control"
               id="datepicker"
               placeholder="Enter a Date"
-              required
-            />
+              required/>
             <br />
           </div>
         </div>
       </div>
-      <button type="button" class="btn btn-dark">Add Task</button>
+      <button type="submit" class="btn btn-dark">Add Task</button>
     </form>
 
     <hr class="mt-5" />
 
-    <section>
+    <section class="container taskWrapper">
+
       <p class="fw-bold">Tasks</p>
-      <div class="card text-bg-light mb-3" style="max-width: 18rem">
-        <div class="card-body">
-          <div class="text-end">
-            <button type="button" class="btn btn-success text-end mb-3">
-              Status
-            </button>
-          </div>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-            aliquid!
-          </p>
-        </div>
-      </div>
+      
+     <!-- <div class="card text-bg-light mb-3" style="max-width: 18rem">
+       <div class="card-body">
+                <div id="taskName">Task Name</div>
+                <div id="taskDescription">Task Description</div>
+                <div id="assignedTo">Assigned To:</div>
+                <div id="dueDate">Date: </div>
+                <div class="text-end">
+                  <button type="button" class="btn btn-success text-end mb-3">Status</button>
+                </div>
+           </div> 
+      </div> -->
     </section>
 
     <script
