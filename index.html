@@ -12,7 +12,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="resources/style.css" />
-    <script src="js/index.js" type="module"></script>
+   <script src="js/taskManager.js" defer></script>
+    <script src="js/index.js"defer></script>
   </head>
   <body>
     <form id="new-todo-form" class="container">
@@ -20,8 +21,7 @@
         <h2 class="text-center">Task List</h2>
         <p class="fw-bold">Add New Task</p>
         <label for="exampleFormControlInput1" class="form-label"
-          >Task name</label
-        >
+          >Task name</label>
         <input
           type="text"
           class="form-control"
@@ -50,8 +50,7 @@
               class="form-control"
               id="formGroupAssignedToInput"
               name="assignedTo"
-              required
-            />
+              required/>
             <span class="error-message">You're not on the team!</span>
           </div>
           <div class="col-auto">
