@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="resources/style.css" />
    <script src="js/taskManager.js" defer></script>
-    <script src="js/index.js"defer></script>
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <form id="new-todo-form" class="container">
@@ -60,8 +60,7 @@
               class="form-control"
               id="datepicker"
               placeholder="Enter a Date"
-              required
-            />
+              required/>
             <br />
           </div>
         </div>
@@ -71,21 +70,21 @@
 
     <hr class="mt-5" />
 
-    <section class="container">
+    <section class="container taskWrapper">
+
       <p class="fw-bold">Tasks</p>
-      <div class="card text-bg-light mb-3" style="max-width: 18rem">
-        <div class="card-body">
-          <div class="text-end">
-            <button type="button" class="btn btn-success text-end mb-3">
-              Status
-            </button>
-          </div>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-            aliquid!
-          </p>
-        </div>
-      </div>
+      
+     <!-- <div class="card text-bg-light mb-3" style="max-width: 18rem">
+       <div class="card-body">
+                <div id="taskName">Task Name</div>
+                <div id="taskDescription">Task Description</div>
+                <div id="assignedTo">Assigned To:</div>
+                <div id="dueDate">Date: </div>
+                <div class="text-end">
+                  <button type="button" class="btn btn-success text-end mb-3">Status</button>
+                </div>
+           </div> 
+      </div> -->
     </section>
 
     <script

@@ -41,7 +41,7 @@ form.addEventListener('submit', (event) => {
 
 const name = document.getElementById("exampleFormControlInput1");
 const description = document.getElementById("exampleFormControlInput1");
-const assignedTo = documnent.getElementById("formGroupAssignedToInput");
+const assignedTo = document.getElementById("formGroupAssignedToInput");
 const dueDate = document.getElementById("datepicker");
 //validation code
 
@@ -55,10 +55,13 @@ function isValidForm(data) {
 
 //input values
 
-name = input.value.trim();
-description = input.value.trim();
-assignedTo = input.value.trim(); 
-dueDate = input.value.trim();
+// name = input.value.trim();
+// description = input.value.trim();
+// assignedTo = input.value.trim(); 
+// dueDate = input.value.trim();
 // Clear the form 
 
 
+
+// let taskHtml = createTaskHtml('task six', 'finish task six', 'afomia', '9/22/22');
+//   console.log(taskHtml);

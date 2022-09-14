@@ -1,12 +1,18 @@
-let createTaskHtml = (name, description, assignedTo, dueDate) => 
-{const name = `<div class="mb-3 col-3">
-  <h2 class="text-center">Task List</h2>
-  <p class="fw-bold">Add New Task</p>
-  <label for="exampleFormControlInput1" class="form-label">Task name ${description}</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1" required/>
-</div> `
+let createTaskHtml = (name, description, assignedTo, dueDate) => { `
+<div class="card-body">
+<div id="taskName">Task Name${name}</div>
+<div id="taskDescription">Task Description${description}</div>
+<div id="assignedTo">Assigned To:${assignedTo}</div>
+<div id="dueDate">Date: ${dueDate}</div>
+<div class="text-end">
+  <button type="button" class="btn btn-success text-end mb-3">
+    Status
+  </button>
+</div>
+</div>`};
 
-
+const taskHtml = createTaskHtml('task six', 'finish task six', 'afomia', '9/22/22');
+console.log(taskHtml);
 
 
 class TaskManager {
@@ -28,3 +34,5 @@ class TaskManager {
     this.tasks.push(task)
   }
 }
+
+
