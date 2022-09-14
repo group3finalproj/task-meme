@@ -11,7 +11,7 @@ let createTaskHtml = (name, description, assignedTo, dueDate) => { `
 </div>
 </div>`};
 
-const taskHtml = createTaskHtml('task six', 'finish task six', 'afomia', '9/22/22');
+let taskHtml = createTaskHtml('task six', 'finish task six', 'afomia', '9/22/22');
 console.log(taskHtml);
 
 
