@@ -35,7 +35,8 @@ function onSubmit(event) {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   event.target.closest('.input-container')?.classList.remove('invalid')
-  event.render();
+  event.addTasks;
+  event.render;
 })
 
 //Select inputs 
