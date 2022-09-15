@@ -1,18 +1,17 @@
-let createTaskHtml = (name, description, assignedTo, dueDate) => { `
-<div class="card-body">
-<div id="taskName">Task Name${name}</div>
-<div id="taskDescription">Task Description${description}</div>
-<div id="assignedTo">Assigned To:${assignedTo}</div>
-<div id="dueDate">Date: ${dueDate}</div>
-<div class="text-end">
-  <button type="button" class="btn btn-success text-end mb-3">
-    Status
-  </button>
-</div>
-</div>`};
+const createTaskHtml = (name, description, assignedTo, dueDate) => { 
+const taskOne = `<div class="card-body">
+    <div id="taskName">Task Name:${name}</div>
+    <div id="taskDescription">Task Description:${description}</div>
+    <div id="assignedTo">Assigned To:${assignedTo}</div>
+    <div id="dueDate">Date:${dueDate}</div>
+    <div class="text-end">
+      <button type="button" class="btn btn-success text-end mb-3">Status</button>
+    </div>
+  </div>`
+  console.log(taskOne)
+};
 
-let taskHtml = createTaskHtml('task six', 'finish task six', 'afomia', '9/22/22');
-console.log(taskHtml);
+createTaskHtml('task six', 'finish task six', 'afomia', '9/22/2022');
 
 
 class TaskManager {
