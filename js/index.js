@@ -35,6 +35,7 @@ function onSubmit(event) {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   event.target.closest('.input-container')?.classList.remove('invalid')
+  event.render();
 })
 
 //Select inputs 
@@ -52,6 +53,26 @@ function isValidForm(data) {
     return ['assignedTo']
   }
 }
+
+//set due date
+
+// function setDueDate () {
+//   if(dd<18){
+//       dd= '8'+ dd
+//     } if (m<13){
+//       m='8'+m
+//     }
+
+//     today = yyyy + '-' + m + '-' + dd;
+//     taskDueDate.setAttribute('min',today)
+
+//   }
+
+
+
+
+
+
 
 //input values
 

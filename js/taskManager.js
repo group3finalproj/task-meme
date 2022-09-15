@@ -20,6 +20,9 @@ class TaskManager {
     this.currentId = currentId
   }
 
+ 
+  
+
   addTask(name, description, assignedTo, dueDate) {
     const task = {
       id: this.currentId++,
@@ -34,9 +37,30 @@ class TaskManager {
   }
 
   render() {
+    const taskHtmlList = [];
+    for  (let i = 0; i <this.tasks.length; i++ ) {
+      const task = this.tasks[1]
 
+      const date = new Date(task.dueDate);
+
+      const formattedDate = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+
+      const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, task.Date)
+
+      taskHtmlList.push(taskHtml)
+    }
+      const tasksHtml = tasksHtmlList.join('\n');
+
+      const tasksList = doctument.querySelector('#tasksList');
+
+      tasksList.innerHTML = tasksHtml;
+  
+    
+  
+    
   }
+  
 }
 
-let tasksHtmlList =  []
+
 
