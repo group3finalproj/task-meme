@@ -32,6 +32,11 @@ class TaskManager {
 
     this.tasks.push(task)
   }
+
+  render() {
+
+  }
 }
 
+let tasksHtmlList =  []
 
