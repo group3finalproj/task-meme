@@ -33,12 +33,16 @@ form.addEventListener('submit', (event) => {
   newNameInput.value = '';
   newDescriptionInput.value = '';
   newAssignedToInput.value = '';
-  newDueDateInput.value;
+  newDueDateInput.value = '';
+
+  
   
 })
 
-
-
+newNameInput.reset()
+newDescriptionInput.reset()
+newAssignedToInput.reset()
+  newDueDateInput.reset()
 
   // event.target.closest('.input-container')?.classList.remove('invalid')
   // event.addTasks;

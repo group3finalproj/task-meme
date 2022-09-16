@@ -48,12 +48,9 @@ class TaskManager {
     }
       const tasksHtml = tasksHtmlList.join('\n');
 
-      const tasksList = doctument.querySelector('#tasksList');
+      const tasksList = doctument.getElementById('#newToDoForm');
 
       tasksList.innerHTML = tasksHtml;
-  
-    
-  
     
   }
   
