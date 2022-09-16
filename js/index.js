@@ -40,21 +40,11 @@ form.addEventListener('submit', (event) => {
 
 
 
-
-
-
-
-
-
-
-
-
- // event.target.closest('.input-container')?.classList.remove('invalid')
+  // event.target.closest('.input-container')?.classList.remove('invalid')
   // event.addTasks;
   // event.render;
 
 //Select inputs 
-
 
 
 //   const {elements} = event.target
@@ -63,9 +53,6 @@ form.addEventListener('submit', (event) => {
 //   const container = assignedTo.closest('.input-container')
 //   const assignedToValue = assignedTo.value.toLowerCase().trim()
 
-  
-
-
 //   if (assignedToValue = '') {
 //     container.classList.add('invalid')
 //     assignedTo.focus()
@@ -73,8 +60,6 @@ form.addEventListener('submit', (event) => {
 //   } else {
 //     container.classList.remove('invalid')
 //   }
-
-
 
 // //validation code
 
