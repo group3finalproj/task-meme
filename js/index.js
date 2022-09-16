@@ -6,54 +6,72 @@ const taskManager = new TaskManager(0);
 console.log(taskManager.tasks);
 
 // Select the New Task Form
-const form = document.getElementById('new-todo-form')
-
+const form = document.getElementById('newToDoForm');
 
 // Add an 'onsubmit'event listener 
-function onSubmit(event) {
-  event.preventDefault()
-
-  const { elements } = event.target
-
-  const assignedTo = elements.assignedTo
-  const container = assignedTo.closest('.input-container')
-  const assignedToValue = assignedTo.value.toLowerCase().trim()
-
-  if (assignedToValue !== 'natasha' && assignedToValue !== 'afomia') {
-    container.classList.add('invalid')
-    assignedTo.focus()
-    assignedTo.select()
-  } else {
-    container.classList.remove('invalid')
-  }
-}
-
-
+// function onSubmit(event) {
+//   event.preventDefault()
 
 //form.addEventListener('submit', onSubmit)
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  event.target.closest('.input-container')?.classList.remove('invalid')
-  event.addTasks;
-  event.render;
+
+  const newNameInput = document.getElementById("exampleFormControlInput1");
+  const newDescriptionInput = document.getElementById("exampleFormControlInput1");
+  const newAssignedToInput = document.getElementById("formGroupAssignedToInput");
+  const newDueDateInput = document.getElementById("datepicker");
+  
+  const name = newNameInput.value;
+  const description = newDescriptionInput.value;
+  const assignedTo = newAssignedToInput.value; 
+  const dueDate = newDueDateInput.value;
+
+  taskManager.addTask(name, description, assignedTo, dueDate);
+  taskManager.render();
+
+  newNameInput.value = '';
+  newDescriptionInput.value = '';
+  newAssignedToInput.value = '';
+  newDueDateInput.value = '';
+
 })
+
+// newNameInput.reset()
+// newDescriptionInput.reset()
+// newAssignedToInput.reset()
+// newDueDateInput.reset()
+
+  // event.target.closest('.input-container')?.classList.remove('invalid')
+  // event.addTasks;
+  // event.render;
 
 //Select inputs 
 
-const name = document.getElementById("exampleFormControlInput1");
-const description = document.getElementById("exampleFormControlInput1");
-const assignedTo = document.getElementById("formGroupAssignedToInput");
-const dueDate = document.getElementById("datepicker");
-//validation code
 
-function isValidForm(data) {
-  if (data === 'good') {
-    return data
-  } else {
-    return ['assignedTo']
-  }
-}
+//   const {elements} = event.target
+
+//   const assignedTo = elements.assignedTo
+//   const container = assignedTo.closest('.input-container')
+//   const assignedToValue = assignedTo.value.toLowerCase().trim()
+
+//   if (assignedToValue = '') {
+//     container.classList.add('invalid')
+//     assignedTo.focus()
+//     assignedTo.select()
+//   } else {
+//     container.classList.remove('invalid')
+//   }
+
+// //validation code
+
+// function isValidForm(data) {
+//   if (data === 'good') {
+//     return data
+//   } else {
+//     return ['assignedTo']
+//   }
+// }
 
 //set due date
 
@@ -69,12 +87,6 @@ function isValidForm(data) {
 
 //   }
 
-
-
-
-
-
-
 //input values
 
 // name = input.value.trim();
@@ -82,8 +94,6 @@ function isValidForm(data) {
 // assignedTo = input.value.trim(); 
 // dueDate = input.value.trim();
 // Clear the form 
-
-
 
 // let taskHtml = createTaskHtml('task six', 'finish task six', 'afomia', '9/22/22');
 //   console.log(taskHtml);
