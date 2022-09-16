@@ -11,7 +11,7 @@ const taskOne = `<div class="card-body">
   console.log(taskOne)
 };
 
-createTaskHtml('task six', 'finish task six', 'afomia', '9/22/2022');
+//createTaskHtml('task six', 'finish task six', 'afomia', '9/22/2022');
 
 
 class TaskManager {
@@ -36,7 +36,7 @@ class TaskManager {
   render() {
     const taskHtmlList = [];
     for  (let i = 0; i < this.tasks.length; i++ ) {
-      const task = this.tasks[1]
+      const task = this.tasks[i]
 
       const date = new Date(task.dueDate);
 
@@ -46,10 +46,10 @@ class TaskManager {
 
       taskHtmlList.push(taskHtml)
     }
-      const tasksHtml = tasksHtmlList.join('\n');
+      const tasksHtml = taskHtmlList.join('\n');
 
-      const tasksList = doctument.getElementById('#newToDoForm');
-
+      const tasksList = document.getElementById('tasksList');
+      //console.log(tasksHtml);
       tasksList.innerHTML = tasksHtml;
     
   }
