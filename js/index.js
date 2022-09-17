@@ -13,12 +13,27 @@ const form = document.getElementById('newToDoForm');
 //   event.preventDefault()
 
 //form.addEventListener('submit', onSubmit)
+//date picker 
+
+const datePickerelement = document.getElementById('datepicker');
+
+
+
+
+
+
+const today = new Date ().toISOString().slice(0, 10);
+
+
+
+
+datePickerelement.setAttribute("min", today);
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const newNameInput = document.getElementById("exampleFormControlInput1");
-  const newDescriptionInput = document.getElementById("exampleFormControlInput1");
+  const newDescriptionInput = document.getElementById("exampleFormControlTextarea1");
   const newAssignedToInput = document.getElementById("formGroupAssignedToInput");
   const newDueDateInput = document.getElementById("datepicker");
   

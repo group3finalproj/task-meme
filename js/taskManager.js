@@ -1,9 +1,9 @@
 const createTaskHtml = (name, description, assignedTo, dueDate) => { 
 const taskOne = `<div class="card-body">
-    <div id="taskName">Task Name:${name}</div>
-    <div id="taskDescription">Task Description:${description}</div>
-    <div id="assignedTo">Assigned To:${assignedTo}</div>
-    <div id="dueDate">Date:${dueDate}</div>
+    <div id="taskName">Task Name: ${name}</div>
+    <div id="taskDescription">Task Description: ${description}</div>
+    <div id="assignedTo">Assigned To: ${assignedTo}</div>
+    <div id="dueDate">Date: ${dueDate}</div>
     <div class="text-end">
       <button type="button" class="btn btn-success text-end mb-3">Status</button>
     </div>
