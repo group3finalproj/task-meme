@@ -8,7 +8,7 @@ const taskOne = `<div class="card-body">
       <button type="button" class="btn btn-success text-end mb-3">Status</button>
     </div>
   </div>`
-  console.log(taskOne)
+ return taskOne
 };
 
 //createTaskHtml('task six', 'finish task six', 'afomia', '9/22/2022');
@@ -42,8 +42,13 @@ class TaskManager {
 
       const formattedDate = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
 
-      const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, task.Date)
+      const taskHtml = createTaskHtml(
+      task.name, 
+      task.description, 
+      task.assignedTo, 
+      task.dueDate);
 
+      console.log("type of taskHtml", typeof taskHtml);
       taskHtmlList.push(taskHtml)
     }
       const tasksHtml = taskHtmlList.join('\n');
