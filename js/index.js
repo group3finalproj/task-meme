@@ -27,6 +27,9 @@ const today = new Date ().toISOString().slice(0, 10);
 
 
 
+
+
+
 datePickerelement.setAttribute("min", today);
 
 form.addEventListener('submit', (event) => {
