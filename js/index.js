@@ -16,20 +16,7 @@ const form = document.getElementById('newToDoForm');
 //date picker 
 
 const datePickerelement = document.getElementById('datepicker');
-
-
-
-
-
-
 const today = new Date ().toISOString().slice(0, 10);
-
-
-
-
-
-
-
 datePickerelement.setAttribute("min", today);
 
 form.addEventListener('submit', (event) => {
@@ -73,7 +60,7 @@ form.addEventListener('submit', (event) => {
 //   const container = assignedTo.closest('.input-container')
 //   const assignedToValue = assignedTo.value.toLowerCase().trim()
 
-//   if (assignedToValue = '') {
+//   if (assignedToValue ==='') {
 //     container.classList.add('invalid')
 //     assignedTo.focus()
 //     assignedTo.select()
